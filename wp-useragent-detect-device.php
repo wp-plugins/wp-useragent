@@ -205,13 +205,39 @@ function detect_device()
 	}
 
 	// Microsoft
-	elseif(preg_match('/Windows Phone OS 7.0/i', $useragent)
+	elseif(preg_match('/Windows Phone OS 7/i', $useragent)
 		|| preg_match('/ZuneWP7/i', $useragent)
 		|| preg_match('/WP7/i', $useragent))
 	{
 		$link="http://www.microsoft.com/windowsphone/";
 		$title.="Windows Phone 7";
 		$code="wp7";
+	}
+	elseif(preg_match('/Windows Phone OS 8/i', $useragent)
+		|| preg_match('/WP8/i', $useragent))
+	{
+		$link="http://www.microsoft.com/windowsphone/";
+		$title.="Windows Phone 8";
+		$code="wp7";
+	}
+	elseif(preg_match('/Xbox/i', $useragent))
+	{
+		$link="http://www.microsoft.com/windowsphone/";
+		$title.="Xbox";
+		$code="xbox";
+
+		if(preg_match('/Xbox360/i', $useragent, $regmatch)
+			|| preg_match('/Xbox 360/i', $useragent, $regmatch))
+		{
+			$title.=" 360";
+			$code="xbox";
+		}
+		elseif(preg_match('/XboxOne/i', $useragent, $regmatch)
+			|| preg_match('/XboxOne/i', $useragent, $regmatch))
+		{
+			$title.=" One";
+			$code="xboxone";
+		}
 	}
 
 	// Motorola
@@ -255,7 +281,13 @@ function detect_device()
 	{
 		$title="Nintendo";
 
-		if(preg_match('/Nintendo DSi/i', $useragent))
+		if(preg_match('/Nintendo 3DS/i', $useragent))
+		{
+			$link="http://www.nintendodsi.com/";
+			$title.=" 3DS";
+			$code="nintendods";
+		}
+		elseif(preg_match('/Nintendo DSi/i', $useragent))
 		{
 			$link="http://www.nintendodsi.com/";
 			$title.=" DSi";

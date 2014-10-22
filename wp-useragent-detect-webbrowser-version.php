@@ -42,7 +42,7 @@ function detect_browser_version($title)
 	}
 	elseif(strtolower($title)==strtolower("Links"))
 	{
-		$start="Links (";
+		$start="Links \\(";
 	}
 	elseif(strtolower($title)==strtolower("UC Browser"))
 	{
@@ -156,10 +156,19 @@ function detect_browser_version($title)
 	{
 		return "D+ ".$version;
 	}
+	elseif(strtolower($title)=="nichrome\/self")
+	{
+		return "Rambler browser ".$version;
+	}
 	elseif(strtolower($title)=="opera labs")
 	{
 		preg_match('/Edition\ Labs([\ ._0-9a-zA-Z]+);/i', $useragent, $regmatch);
 		return $title.$regmatch[1]." ".$version;
+	}
+	elseif(strtolower($title)=="escape"
+		|| strtolower($title)=="espial")
+	{
+		return $version;
 	}
 	else
 	{

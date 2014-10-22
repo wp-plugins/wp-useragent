@@ -61,6 +61,12 @@ function detect_webbrowser()
 		$title="Amiga ".detect_browser_version("Voyager");
 		$code="amigavoyager";
 	}
+	elseif(preg_match('/ANTFresco/i', $useragent))
+	{
+		$link="http://en.wikipedia.org/wiki/Fresco_(web_browser)";
+		$title="ANT ".detect_browser_version("Fresco");
+		$code="antfresco";
+	}
 	elseif(preg_match('/AOL/i', $useragent))
 	{
 		$link="http://downloads.channel.aol.com/browser";
@@ -85,11 +91,23 @@ function detect_webbrowser()
 		$title="Avant ".detect_browser_version("Browser");
 		$code="avantbrowser";
 	}
+	elseif(preg_match('/WhiteHat\ Aviator/i', $useragent))
+	{
+		$link="http://www.whitehatsec.com/aviator/";
+		$title=detect_browser_version("Aviator");
+		$code="aviator";
+	}
 	elseif(preg_match('/baidubrowser/i', $useragent))
 	{
 		$link="http://liulanqi.baidu.com/";
-		$title=detect_browser_version("Browser");
+		$title="Baidu ".detect_browser_version("Browser");
 		$code="baidubrowser";
+	}
+	elseif(preg_match('/\ Spark/i', $useragent))
+	{
+		$link="http://en.browser.baidu.com/";
+		$title="Baidu ".detect_browser_version("Spark");
+		$code="baiduspark";
 	}
 	elseif(preg_match('/BarcaPro/i', $useragent))
 	{
@@ -373,17 +391,17 @@ function detect_webbrowser()
 		$title=detect_browser_version("Edbrowse");
 		$code="edbrowse";
 	}
-	elseif(preg_match('/Elinks/i', $useragent))
-	{
-		$link="http://elinks.or.cz/";
-		$title=detect_browser_version("Elinks");
-		$code="elinks";
-	}
 	elseif(preg_match('/Element\ Browser/i', $useragent))
 	{
 		$link="http://www.elementsoftware.co.uk/software/elementbrowser/";
 		$title="Element ".detect_browser_version("Browser");
 		$code="elementbrowser";
+	}
+	elseif(preg_match('/Elinks/i', $useragent))
+	{
+		$link="http://elinks.or.cz/";
+		$title=detect_browser_version("Elinks");
+		$code="elinks";
 	}
 	elseif(preg_match('/Enigma\ Browser/i', $useragent))
 	{
@@ -412,7 +430,13 @@ function detect_webbrowser()
 	elseif(preg_match('/Escape/i', $useragent))
 	{
 		$link="http://www.espial.com/products/evo_browser/";
-		$title="Espial TV Browser - ".detect_browser_version("Escape");
+		$title="Espial TV Browser ".detect_browser_version("Escape");
+		$code="espialtvbrowser";
+	}
+	elseif(preg_match('/Espial/i', $useragent))
+	{
+		$link="http://www.espial.com/products/evo_browser/";
+		$title="Espial TV Browser ".detect_browser_version("Espial");
 		$code="espialtvbrowser";
 	}
 	elseif(preg_match('/Fennec/i', $useragent))
@@ -560,6 +584,12 @@ function detect_webbrowser()
 		$title="GNU ".detect_browser_version("IceCat");
 		$code="icecat";
 	}
+	elseif(preg_match('/IceDragon/i', $useragent))
+	{
+		$link="http://www.comodo.com/home/browsers-toolbars/icedragon-browser.php";
+		$title=detect_browser_version("IceDragon");
+		$code="icedragon";
+	}
 	elseif(preg_match('/IceWeasel/i', $useragent))
 	{
 		$link="http://www.geticeweasel.org/";
@@ -626,6 +656,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("Kazehakase");
 		$code="kazehakase";
 	}
+	elseif(preg_match('/Kinza/i', $useragent))
+	{
+		$link="http://www.kinza.jp/";
+		$title=detect_browser_version("Kinza");
+		$code="kinza";
+	}
 	elseif(preg_match('/Strata/i', $useragent))
 	{
 		$link="http://www.kirix.com/";
@@ -667,6 +703,12 @@ function detect_webbrowser()
 		$link="http://wiki.freespire.org/index.php/Web_Browser";
 		$title=detect_browser_version("LBrowser");
 		$code="lbrowser";
+	}
+	elseif(preg_match('/LG Browser/i', $useragent))
+	{
+		$link="http://developer.lgappstv.com/TV_HELP/index.jsp?topic=%2Flge.tvsdk.developing.book%2Fhtml%2FDeveloping+Web+App%2FDeveloping+Web+App%2FWeb+Engine.htm";
+		$title="LG Web ".detect_browser_version("Browser");
+		$code="lgbrowser";
 	}
 	elseif(preg_match('/LeechCraft/i', $useragent))
 	{
@@ -795,6 +837,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("MultiZilla");
 		$code="mozilla";
 	}
+	elseif(preg_match('/MxNitro/i', $useragent))
+	{
+		$link="http://usa.maxthon.com/mxnitro/";
+		$title=detect_browser_version("MxNitro");
+		$code="mxnitro";
+	}
 	elseif(preg_match('/myibrow/i', $useragent)
 		&& preg_match('/My\ Internet\ Browser/i', $useragent))
 	{
@@ -867,6 +915,12 @@ function detect_webbrowser()
 		$link="http://www.access-company.com/";
 		$title=detect_browser_version("NF-Browser");
 		$code="netfront";
+	}
+	elseif(preg_match('/Nintendo 3DS/i', $useragent))
+	{
+		$link="http://en.wikipedia.org/wiki/Internet_Browser_(Nintendo_3DS)";
+		$title="Nintendo 3DS";
+		$code="nintendo3dsbrowser";
 	}
 	elseif(preg_match('/NintendoBrowser/i', $useragent))
 	{
@@ -1061,6 +1115,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("Polaris");
 		$code="polaris";
 	}
+	elseif(preg_match('/Polarity/i', $useragent))
+	{
+		$link="http://polarityweb.webs.com/";
+		$title=detect_browser_version("Polarity");
+		$code="polarity";
+	}
 	elseif(preg_match('/Prism/i', $useragent))
 	{
 		$link="http://prism.mozillalabs.com/";
@@ -1079,6 +1139,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("QupZilla");
 		$code="qupzilla";
 	}
+	elseif(preg_match('/Nichrome\/self/i', $useragent))
+	{
+		$link="http://soft.rambler.ru/browser/";
+		$title=detect_browser_version("Nichrome\/self");
+		$code="ramblerbrowser";
+	}
 	elseif(preg_match('/rekonq/i', $useragent))
 	{
 		$link="http://rekonq.sourceforge.net/";
@@ -1090,6 +1156,12 @@ function detect_webbrowser()
 		$link="http://retawq.sourceforge.net/";
 		$title=detect_browser_version("retawq");
 		$code="terminal";
+	}
+	elseif(preg_match('/Roccat/i', $useragent))
+	{
+		$link="http://www.runecats.com/roccat.html";
+		$title=detect_browser_version("Roccat");
+		$code="roccatbrowser";
 	}
 	elseif(preg_match('/RockMelt/i', $useragent))
 	{
@@ -1239,7 +1311,7 @@ function detect_webbrowser()
 		$title=detect_browser_version("Sundance");
 		$code="sundance";
 	}
-	elseif(preg_match('/Sunrise/i', $useragent))
+	elseif(preg_match('/Sundial/i', $useragent))
 	{
 		$link="http://www.sundialbrowser.com/";
 		$title=detect_browser_version("Sundial");
@@ -1250,6 +1322,12 @@ function detect_webbrowser()
 		$link="http://www.sunrisebrowser.com/";
 		$title=detect_browser_version("Sunrise");
 		$code="sunrise";
+	}
+	elseif(preg_match('/Superbird/i', $useragent))
+	{
+		$link="http://superbird.me/";
+		$title=detect_browser_version("Superbird");
+		$code="superbird";
 	}
 	elseif(preg_match('/Surf/i', $useragent))
 	{
@@ -1304,6 +1382,12 @@ function detect_webbrowser()
 		$link="http://en.wikipedia.org/wiki/TenFourFox";
 		$title=detect_browser_version("TenFourFox");
 		$code="tenfourfox";
+	}
+	elseif(preg_match('/QtCarBrowser/i', $useragent))
+	{
+		$link="http://www.teslamotors.com/";
+		$title="Tesla Car Browser";
+		$code="teslacarbrowser";
 	}
 	elseif(preg_match('/TheWorld/i', $useragent))
 	{
@@ -1428,6 +1512,18 @@ function detect_webbrowser()
 		$title=detect_browser_version("Android Webkit");
 		$code="android-webkit";
 	}
+	elseif(preg_match('/Waterfox/i', $useragent))
+	{
+		$link="http://www.waterfoxproject.org/";
+		$title=detect_browser_version("Waterfox");
+		$code="waterfox";
+	}
+	elseif(preg_match('/WebExplorer/i', $useragent))
+	{
+		$link="http://webexplorerbrasil.com/";
+		$title="Web ".detect_browser_version("Explorer");
+		$code="webexplorer";
+	}
 	elseif(preg_match('/WebianShell/i', $useragent))
 	{
 		$link="http://webian.org/shell/";
@@ -1515,8 +1611,14 @@ function detect_webbrowser()
 	elseif(preg_match('/YaBrowser/i', $useragent))
 	{
 		$link="http://browser.yandex.com/";
-		$title="Yandex.".detect_browser_version("Browser");
+		$title="Yandex ".detect_browser_version("Browser");
 		$code="yandex";
+	}
+	elseif(preg_match('/YRCWeblink/i', $useragent))
+	{
+		$link="http://weblink.justyrc.com/";
+		$title="YRC ".detect_browser_version("Weblink");
+		$code="yrcweblink";
 	}
 	elseif(preg_match('/zBrowser/i', $useragent))
 	{

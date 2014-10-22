@@ -3,8 +3,8 @@ Contributors: kyleabaker
 Donate Link: http://kyleabaker.com/goodies/coding/wp-useragent/
 Tags: useragent, user-agent, user agent, web, browser, web browser, operating system, platform, os, mac, apple, windows, win, linux, phone
 Requires at least: 2.0
-Tested up to: 3.8
-Stable tag: 1.0.3
+Tested up to: 4.0
+Stable tag: 1.0.4
 
 == Description ==
 
@@ -65,6 +65,14 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 
 == Changelog ==
+
+= v1.0.4 =
+* Fixed error detecting Links browser version.
+* Fixed an error detecting x64 versions of Windows.
+* Added detection for Nintendo 3DS device, Microsoft Xbox, Xbox 360, Xbox One
+* Added detection for Windows 10
+* Added detection for 3DS Browser, ANT Fresco, Aviator, Baidu Spark, Espial TV Browser, IceDragon, Kinza, LG Web Browser, MxNitro, Polarity, Rambler browser, Roccat browser, Superbird, Tesla Car Browser, Waterfox, Web Explorer, YRC Weblink
+
 
 = v1.0.3 =
 * Fixed detection of IE11 (props: G's)
@@ -584,10 +592,9 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 == Upgrade Notice ==
 
-= v1.0.3 =
-* Fixed detection of IE11 (props: G's)
-* Fixed detection of Windows 8.1 (props: JayXon)
-* Fixed detection of Opera 14 for Android and Opera 15+ for Desktop (props: Rafae)
-* Fixed an issue with Ubuntu version detection.
-* Added detection for Amigo, Coast, CoRom, DPlus, ONE Browser, Otter, Perk, PS4 Web Browser and Ubuntu Web Browser.
-* Added detection for PlayStation 4, Ubuntu Touch (Mobile and Tablet).
+= v1.0.4 =
+* Fixed error detecting Links browser version.
+* Fixed an error detecting x64 versions of Windows.
+* Added detection for Nintendo 3DS device, Microsoft Xbox, Xbox 360, Xbox One
+* Added detection for Windows 10
+* Added detection for 3DS Browser, ANT Fresco, Aviator, Baidu Spark, Espial TV Browser, IceDragon, Kinza, LG Web Browser, MxNitro, Polarity, Rambler browser, Roccat browser, Superbird, Tesla Car Browser, Waterfox, Web Explorer, YRC Weblink
