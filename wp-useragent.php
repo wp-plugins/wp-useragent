@@ -3,7 +3,7 @@
 Plugin Name: WP-UserAgent
 Plugin URI: http://kyleabaker.com/goodies/coding/wp-useragent/
 Description: A simple User-Agent detection plugin that lets you easily insert icons and/or textual web browser and operating system details with each comment.
-Version: 1.0.4
+Version: 1.0.5
 Author: Kyle Baker
 Author URI: http://kyleabaker.com/
 //Author: Fernando Briano
@@ -96,11 +96,11 @@ function img($code, $type, $title)
 	// src=http://blogurl/plugins/plugin-name/size/net-os-device/code.png
 	if($ua_trackback==1)
 	{
-		$img="<img src='".$url_img.$ua_track_size.$type.$code.".png' title='".$title."' ".$img_style." alt='".$title."'";
+		$img="<img src='".$url_img.$ua_track_size.$type.$code.".png' title='".$title."' ".$img_style." alt='".$title."' height='".$ua_track_size."' width='".$ua_track_size."'";
 	}
 	else
 	{
-		$img="<img src='".$url_img.$ua_comment_size.$type.$code.".png' title='".$title."' ".$img_style." alt='".$title."'";
+		$img="<img src='".$url_img.$ua_comment_size.$type.$code.".png' title='".$title."' ".$img_style." alt='".$title."' height='".$ua_comment_size."' width='".$ua_comment_size."'";
 	}
 
 	// End the img tag following their specified html preference.

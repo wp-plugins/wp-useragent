@@ -4,7 +4,7 @@ Donate Link: http://kyleabaker.com/goodies/coding/wp-useragent/
 Tags: useragent, user-agent, user agent, web, browser, web browser, operating system, platform, os, mac, apple, windows, win, linux, phone
 Requires at least: 2.0
 Tested up to: 4.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 == Description ==
 
@@ -65,6 +65,10 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 
 == Changelog ==
+
+= v1.0.5 =
+* Added height and width attributes to icons to fix an issue with 'Simple Lazyload' (props: Yu)
+
 
 = v1.0.4 =
 * Fixed error detecting Links browser version.
@@ -592,9 +596,5 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 == Upgrade Notice ==
 
-= v1.0.4 =
-* Fixed error detecting Links browser version.
-* Fixed an error detecting x64 versions of Windows.
-* Added detection for Nintendo 3DS device, Microsoft Xbox, Xbox 360, Xbox One
-* Added detection for Windows 10
-* Added detection for 3DS Browser, ANT Fresco, Aviator, Baidu Spark, Espial TV Browser, IceDragon, Kinza, LG Web Browser, MxNitro, Polarity, Rambler browser, Roccat browser, Superbird, Tesla Car Browser, Waterfox, Web Explorer, YRC Weblink
+= v1.0.5 =
+* Added height and width attributes to icons to fix an issue with 'Simple Lazyload' (props: Yu)
