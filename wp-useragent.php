@@ -3,14 +3,14 @@
 Plugin Name: WP-UserAgent
 Plugin URI: http://kyleabaker.com/goodies/coding/wp-useragent/
 Description: A simple User-Agent detection plugin that lets you easily insert icons and/or textual web browser and operating system details with each comment.
-Version: 1.0.5
+Version: 1.0.6
 Author: Kyle Baker
 Author URI: http://kyleabaker.com/
 //Author: Fernando Briano
 //Author URI: http://picandocodigo.net
 */
 
-/* Copyright 2008-2014  Kyle Baker  (email: kyleabaker@gmail.com)
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
 	//Copyright 2008  Fernando Briano  (email : transformers.es@gmail.com)
 
 This program is free software; you can redistribute it and/or modify
@@ -128,7 +128,7 @@ function wp_useragent()
 	get_currentuserinfo();
 
 	// Where should we display the useragent output?
-	$useragent=$comment->comment_agent;
+	$useragent=wp_strip_all_tags($comment->comment_agent, false);
 	if($ua_output_location=="before")
 	{
 		display_useragent();
@@ -244,7 +244,7 @@ function display_useragent()
 		}
 
 		// Attach the full ua string to the output.
-		$ua.="<small>".htmlspecialchars($comment->comment_agent)."</small>";
+		$ua.="<small>".htmlspecialchars(wp_strip_all_tags($comment->comment_agent, false))."</small>";
 	}
 
 	// The following conditional will hopefully prevent a problem where
@@ -262,7 +262,7 @@ function useragent_output_custom(){
 	if($ua_output_location=="custom")
 	{
 		get_currentuserinfo();
-		$useragent=$comment->comment_agent;
+		$useragent=wp_strip_all_tags($comment->comment_agent, false);
 		display_useragent();
 	}
 }

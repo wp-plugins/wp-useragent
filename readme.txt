@@ -3,8 +3,8 @@ Contributors: kyleabaker
 Donate Link: http://kyleabaker.com/goodies/coding/wp-useragent/
 Tags: useragent, user-agent, user agent, web, browser, web browser, operating system, platform, os, mac, apple, windows, win, linux, phone
 Requires at least: 2.0
-Tested up to: 4.0
-Stable tag: 1.0.5
+Tested up to: 4.2.2
+Stable tag: 1.0.6
 
 == Description ==
 
@@ -65,6 +65,10 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 
 == Changelog ==
+
+= v1.0.6 =
+* Fixed XSS security vulnerability
+
 
 = v1.0.5 =
 * Added height and width attributes to icons to fix an issue with 'Simple Lazyload' (props: Yu)
@@ -596,5 +600,5 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 == Upgrade Notice ==
 
-= v1.0.5 =
-* Added height and width attributes to icons to fix an issue with 'Simple Lazyload' (props: Yu)
+= v1.0.6 =
+* Fixed XSS security vulnerability
