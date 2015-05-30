@@ -1,9 +1,27 @@
+<?php
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+?>
 <!--Begin: Options file for WP-UserAgent-->
 <div class="wrap">
 	<div id="icon-options-general" class="icon32"><br /></div>
 	<h2>WP-UserAgent</h2>
 	<form method="post" action="options.php">
-		<?php 
+		<?php
 			wp_nonce_field('update-options');
 			$ua_doctype				= get_option('ua_doctype');
 			$ua_comment_size		= get_option('ua_comment_size');
@@ -40,7 +58,7 @@
 						<p style="padding-left:10px;padding-right:10px;">This field is optional and generally will not affect the way that this plugin appears. However, if you wish to control
 						the <a href="http://www.w3schools.com/tags/tag_DOCTYPE.asp">DocType</a> in order to generate validly coded pages and validate your pages with <a href="http://www.w3.org/">W3.org</a>
 						then you can specify the DocType here.</p>
-						
+
 						<table class="form-table" style="margin-top: 0">
 							<tbody>
 								<tr valign='top'>
@@ -63,7 +81,7 @@
 					<h3 class="hndl"><span>User Agent icons</span></h3>
 					<div class="inside">
 						<p style="padding-left:10px;padding-right:10px;">You can change the size of the icons as well as whether or not to display text with the icons.</p>
-						
+
 						<table class="form-table" style="margin-top: 0">
 							<tbody>
 								<tr valign='top'>
@@ -100,9 +118,9 @@
 										<select id="ua_image_style" name="ua_image_style" onchange="preview();">
 											<option value="1" <?php if($ua_image_style==1) echo 'selected="selected"' ?>>Default</option>
 											<option value="2" <?php if($ua_image_style==2) echo 'selected="selected"' ?>>Inline Style</option>
-											<option value="3" <?php if($ua_image_style==3) echo 'selected="selected"' ?>>Class</option>		
+											<option value="3" <?php if($ua_image_style==3) echo 'selected="selected"' ?>>Class</option>
 										</select>
-										
+
 										<p>If you're not sure what this is, please leave it as &quot;Default&quot; which applies a no-border style.<br />
 											The Comment Preview will not be updated with these changes.</p>
 									</div></td>
@@ -124,7 +142,7 @@
 					<h3 class="hndl"><span>Display text</span></h3>
 					<div class="inside">
 						<p style="padding-left:10px;padding-right:10px;">You can change the text between the Web Browser and the Operating System in the following options.</p>
-						
+
 						<table class="form-table" style="margin-top: 0">
 							<tbody>
 								<tr valign='top'>
@@ -189,7 +207,7 @@
 					<h3 class="hndl"><span>Display location</span></h3>
 					<div class="inside">
 						<p style="padding-left:10px;padding-right:10px;">You can change the location that the User Agent output will appear (explanation below).</p>
-						
+
 						<table class="form-table" style="margin-top: 0">
 							<tbody>
 								<tr valign='top'>
@@ -218,7 +236,7 @@
 													&lt;cite&gt;&lt;?php comment_author_link() ?&gt;&lt;/cite&gt; <span style="background-color:#fff;"><strong>&lt;?php useragent_output_custom(); ?&gt;</strong></span> says:&lt;br /&gt;<br />
 													&lt;?php comment_text() ?&gt;
 												</code><br /><br />
-												<em>CAUTION:</em> If you select "Custom" and don't use <code><span style="background-color:#fff;"><strong>&lt;?php useragent_output_custom(); ?&gt;</strong></span></code> in your template, 
+												<em>CAUTION:</em> If you select "Custom" and don't use <code><span style="background-color:#fff;"><strong>&lt;?php useragent_output_custom(); ?&gt;</strong></span></code> in your template,
 												the browser and operating system details will not be displayed. With this option, they are only displayed where and when this function is called.</div></li>
 										</ol>
 									</div></td>
@@ -264,7 +282,7 @@
 					<h3 class="hndl"><span>Help</span></h3>
 					<div class="inside">
 						<p style="padding-left:10px;padding-right:10px;">You can change the location that the User Agent output will appear (explanation below).</p>
-						
+
 						<table class="form-table" style="margin-top: 0">
 							<tbody>
 								<tr valign='top'>

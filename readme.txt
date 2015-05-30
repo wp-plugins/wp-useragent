@@ -4,13 +4,13 @@ Donate Link: http://kyleabaker.com/goodies/coding/wp-useragent/
 Tags: useragent, user-agent, user agent, web, browser, web browser, operating system, platform, os, mac, apple, windows, win, linux, phone
 Requires at least: 2.0
 Tested up to: 4.2.2
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 
 == Description ==
 
 *WP-UserAgent* is a simple plugin that allows you to display details about a computer's [operating system](http://en.wikipedia.org/wiki/Operating_system) or [web browser](http://en.wikipedia.org/wiki/Web_browser) that your visitors comment from.
 
-It uses the comment-&gt;agent property to access the [User-Agent string](http://en.wikipedia.org/wiki/User_agent). Through a series of regular expresions, this plugin is able to detect the operating system and browser which can be integrated in comments or placed in custom places through your template(s).
+It uses the comment-&gt;agent property to access the [User-Agent string](http://en.wikipedia.org/wiki/User_agent). Through a series of regular expressions, this plugin is able to detect the operating system and browser which can be integrated in comments or placed in custom places through your template(s).
 
 I’m adding new web browsers and operating systems frequently, as well as updating and optimizing the source code. Your feedback is very important, new features have been added by request, so if there’s something you would like to see in *WP-UserAgent*, [leave a comment](http://kyleabaker.com/goodies/coding/wp-useragent/), and I’ll see what I can do.
 
@@ -22,16 +22,16 @@ Images created with The Gimp - [http://www.gimp.org/](http://www.gimp.org/)
 1. **Upload** the "wp-useragent" folder to /wp-contents/plugins/
 1. **Login** to your WordPress Admin menu, go to Plugins, and activate it.
 1. In your WordPress Admin menu, you will find a new menu under **Settings** called WP-UserAgent. There you can choose the displayed icons size, and select where to display the plugin. There are three options for displaying the plugin:
-	
+
 	* Before the comment text. User's WebBrowser and OS will be displayed before comment text.
 	* After the comment text.User's WebBrowser and OS will be displayed after comment text.
 	* Custom (Advanced). You can specify the location using the useragent_output_custom() function inside the comments loop in your template (Generally in comments.php).
-		
+
 		Example:
 		&lt;?php foreach ($comments as $comment) : ?&gt;
 		<cite>&lt;?php comment_author_link() ?&gt;</cite> &lt;?php useragent_output_custom(); ?&gt; says:
 		&lt;?php comment_text() ?&gt;
-		
+
 	*CAUTION*: If you select "Custom" and don't use &lt;?php useragent_output_custom(); ?&gt; in your template, you won't get the information displayed.
 
 Other options include the text to use when displaying the user's web browser and operating system as well as whether or not to show the full User-Agent string.
@@ -65,6 +65,14 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 
 == Changelog ==
+
+= v1.0.7 =
+* Added detection for Microsoft Edge, Seznam.cz, Coc Coc, Google Search App, WebPositive, Vivaldi, luakit, wOSBrowser, Puffin, NetFront Life, Ninesky, Palm WebPro browsers.
+* Optimized/reduced filesize of 31 images
+* Added detection for Windows Phone 10
+* Updated Windows 10 detection
+* Cleaned up syntax
+
 
 = v1.0.6 =
 * Fixed XSS security vulnerability
@@ -594,11 +602,13 @@ Some of you may compare this to another well-known plugin named browsersniff. WP
 
 = TO-DO: =
 * Refactor codebase to simplify maintaince of this plugin and reduce duplicate code.
-* Reach a stable and solid 1.0 release where the plugin is mostly finalized and updates will generally be additional browsers and/or systems.
 * New web browsers, devices and operating systems are always welcome.
-* Add detection for PSVita when its released.
 
 == Upgrade Notice ==
 
-= v1.0.6 =
-* Fixed XSS security vulnerability
+= v1.0.7 =
+* Added detection for Microsoft Edge, Seznam.cz, Coc Coc, Google Search App, WebPositive, Vivaldi, luakit, wOSBrowser, Puffin, NetFront Life, Ninesky, Palm WebPro browsers.
+* Optimized/reduced filesize of 31 images
+* Added detection for Windows Phone 10
+* Updated Windows 10 detection
+* Cleaned up syntax

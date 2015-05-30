@@ -1,4 +1,20 @@
 <?php
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 // Detect Operating System
 function detect_os()
@@ -694,13 +710,16 @@ function detect_os()
 	{
 		$link="http://www.microsoft.com/windows/";
 
-		if(preg_match('/Windows NT 6.4; Win64; x64/i', $useragent)
+		if(preg_match('/Windows NT 10.0; Win64; x64/i', $useragent)
+			|| preg_match('/Windows NT 10.0; WOW64/i', $useragent)
+			|| preg_match('/Windows NT 6.4; Win64; x64/i', $useragent)
 			|| preg_match('/Windows NT 6.4; WOW64/i', $useragent))
 		{
 			$title="Windows 10 x64 Edition";
 			$code="win-6";
 		}
-		elseif(preg_match('/Windows NT 6.4/i', $useragent))
+		elseif(preg_match('/Windows NT 10.0/i', $useragent)
+			|| preg_match('/Windows NT 6.4/i', $useragent))
 		{
 			$title="Windows 10";
 			$code="win-6";

@@ -1,4 +1,20 @@
 <?php
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 // Detect Console or Mobile Device
 function detect_device()
@@ -210,20 +226,27 @@ function detect_device()
 		|| preg_match('/WP7/i', $useragent))
 	{
 		$link="http://www.microsoft.com/windowsphone/";
-		$title.="Windows Phone 7";
+		$title="Windows Phone 7";
 		$code="wp7";
 	}
 	elseif(preg_match('/Windows Phone OS 8/i', $useragent)
 		|| preg_match('/WP8/i', $useragent))
 	{
 		$link="http://www.microsoft.com/windowsphone/";
-		$title.="Windows Phone 8";
+		$title="Windows Phone 8";
 		$code="wp7";
+	}
+	elseif(preg_match('/Windows Phone 10/i', $useragent)
+		|| preg_match('/WP10/i', $useragent))
+	{
+		$link="http://www.microsoft.com/windowsphone/";
+		$title="Windows Phone 10";
+		$code="wp10";
 	}
 	elseif(preg_match('/Xbox/i', $useragent))
 	{
 		$link="http://www.microsoft.com/windowsphone/";
-		$title.="Xbox";
+		$title="Xbox";
 		$code="xbox";
 
 		if(preg_match('/Xbox360/i', $useragent, $regmatch)
@@ -244,13 +267,13 @@ function detect_device()
 	elseif(preg_match('/\ Droid/i', $useragent))
 	{
 		$link="http://en.wikipedia.org/wiki/Motorola_Droid";
-		$title.="Motorola Droid";
+		$title="Motorola Droid";
 		$code="motorola";
 	}
 	elseif(preg_match('/XT720/i', $useragent))
 	{
 		$link="http://en.wikipedia.org/wiki/Motorola";
-		$title.="Motorola Motoroi (XT720)";
+		$title="Motorola Motoroi (XT720)";
 		$code="motorola";
 	}
 	elseif(preg_match('/MOT-/i', $useragent)
@@ -272,7 +295,7 @@ function detect_device()
 	}
 	elseif(preg_match('/XOOM/i', $useragent)){
 		$link="http://en.wikipedia.org/wiki/Motorola_Xoom";
-		$title.="Motorola Xoom";
+		$title="Motorola Xoom";
 		$code="motorola";
 	}
 

@@ -1,4 +1,20 @@
 <?php
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 // Detect Web Browser versions
 function detect_browser_version($title)
@@ -8,14 +24,14 @@ function detect_browser_version($title)
 	// Fix for Opera's UA string changes in v10.00+ (and others)
 	$start=$title;
 	if( (strtolower($title)==strtolower("Opera")
-			|| strtolower($title)==strtolower("Opera Next") 
+			|| strtolower($title)==strtolower("Opera Next")
 			|| strtolower($title)==strtolower("Opera Labs"))
 		&& preg_match('/Version/i', $useragent))
 	{
 		$start="Version";
 	}
 	elseif( (strtolower($title)==strtolower("Opera")
-			|| strtolower($title)==strtolower("Opera Next") 
+			|| strtolower($title)==strtolower("Opera Next")
 			|| strtolower($title)==strtolower("Opera Developer"))
 		&& preg_match('/OPR/i', $useragent))
 	{
@@ -80,6 +96,22 @@ function detect_browser_version($title)
 	elseif(strtolower($title)=="msie")
 	{
 		return " ".$version;
+	}
+	elseif(strtolower($title)=="NetFrontLifeBrowser")
+	{
+		return "NetFront Life ".$version;
+	}
+	elseif(strtolower($title)=="ninesky-android-mobile")
+	{
+		return "Ninesky ".$version;
+	}
+	elseif(strtolower($title)=="coc_coc_browser")
+	{
+		return "Coc Coc ".$version;
+	}
+	elseif(strtolower($title)=="gsa")
+	{
+		return "Google Search App ".$version;
 	}
 	elseif(strtolower($title)=="multi-browser")
 	{

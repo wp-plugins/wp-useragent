@@ -1,4 +1,20 @@
 <?php
+/* Copyright 2008-2015  Kyle Baker  (email: kyleabaker@gmail.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 // Detect Web Browsers
 function detect_webbrowser()
@@ -252,6 +268,12 @@ function detect_webbrowser()
 		$link="http://coastbyopera.com/";
 		$title=detect_browser_version("Coast");
 		$code="coast";
+	}
+	elseif(preg_match('/coc_coc_browser/i', $useragent))
+	{
+		$link="http://coccoc.vn/";
+		$title=detect_browser_version("coc_coc_browser");
+		$code="coccoc";
 	}
 	elseif(preg_match('/Columbus/i', $useragent))
 	{
@@ -518,6 +540,13 @@ function detect_webbrowser()
 		$title=detect_browser_version("GreenBrowser");
 		$code="greenbrowser";
 	}
+	elseif(preg_match('/GSA/i', $useragent)
+		&& preg_match('/Mobile/i', $useragent))
+	{
+		$link="http://en.wikipedia.org/wiki/Google_Search#Mobile_app";
+		$title=detect_browser_version("GSA");
+		$code="google";
+	}
 	elseif(preg_match('/Hana/i', $useragent))
 	{
 		$link="http://www.alloutsoftware.com/";
@@ -741,6 +770,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("Lorentz");
 		$code="firefoxdevpre";
 	}
+	elseif(preg_match('/luakit/i', $useragent))
+	{
+		$link="http://luakit.org/";
+		$title="luakit";
+		$code="luakit";
+	}
 	elseif(preg_match('/Lunascape/i', $useragent))
 	{
 		$link="http://www.lunascape.tv";
@@ -880,6 +915,12 @@ function detect_webbrowser()
 		$title=detect_browser_version("NetCaptor");
 		$code="netcaptor";
 	}
+	elseif(preg_match('/NetFrontLifeBrowser/i', $useragent))
+	{
+		$link="http://gl.access-company.com/files/legacy/products/nflife/app_browser2.html";
+		$title=detect_browser_version("NetFrontLifeBrowser");
+		$code="netfrontlife";
+	}
 	elseif(preg_match('/NetFront/i', $useragent))
 	{
 		$link="http://www.access-company.com/";
@@ -915,6 +956,12 @@ function detect_webbrowser()
 		$link="http://www.access-company.com/";
 		$title=detect_browser_version("NF-Browser");
 		$code="netfront";
+	}
+	elseif(preg_match('/Ninesky-android-mobile/i', $useragent))
+	{
+		$link="http://ninesky.com/";
+		$title=detect_browser_version("Ninesky-android-mobile");
+		$code="ninesky";
 	}
 	elseif(preg_match('/Nintendo 3DS/i', $useragent))
 	{
@@ -1055,6 +1102,12 @@ function detect_webbrowser()
 		$title="Palm ".detect_browser_version("Pre");
 		$code="palmpre";
 	}
+	elseif(preg_match('/\ WebPro\//i', $useragent))
+	{
+		$link="http://www.hpwebos.com/us/support/handbooks/tungstent/webbrowser_hb.pdf";
+		$title="Palm ".detect_browser_version("WebPro");
+		$code="palmwebpro";
+	}
 	elseif(preg_match('/Palemoon/i', $useragent))
 	{
 		$link="http://www.palemoon.org/";
@@ -1126,6 +1179,12 @@ function detect_webbrowser()
 		$link="http://prism.mozillalabs.com/";
 		$title=detect_browser_version("Prism");
 		$code="prism";
+	}
+	elseif(preg_match('/Puffin/i', $useragent))
+	{
+		$link="http://www.puffinbrowser.com/";
+		$title=detect_browser_version("Puffin");
+		$code="puffin";
 	}
 	elseif(preg_match('/QtWeb\ Internet\ Browser/i', $useragent))
 	{
@@ -1219,6 +1278,12 @@ function detect_webbrowser()
 		$link="http://ie.sogou.com/";
 		$title="Sogou Explorer";
 		$code="sogou";
+	}
+	elseif(preg_match('/Seznam\.cz/i', $useragent))
+	{
+		$link="http://www.seznam.cz/prohlizec";
+		$title="Seznam.".detect_browser_version("cz");
+		$code="seznam-cz";
 	}
 	elseif(preg_match('/Shiira/i', $useragent))
 	{
@@ -1486,6 +1551,12 @@ function detect_webbrowser()
 		$title="uzbl";
 		$code="uzbl";
 	}
+	elseif(preg_match('/Vivaldi/i', $useragent))
+	{
+		$link="http://vivaldi.com/";
+		$title=detect_browser_version("Vivaldi");
+		$code="vivaldi";
+	}
 	elseif(preg_match('/Vimprobable/i', $useragent))
 	{
 		$link="http://www.vimprobable.org/";
@@ -1503,6 +1574,13 @@ function detect_webbrowser()
 		$link="http://w3m.sourceforge.net/";
 		$title=detect_browser_version("W3M");
 		$code="w3m";
+	}
+	elseif(preg_match('/AppleWebkit/i', $useragent)
+		&& preg_match('/WebPositive/i', $useragent))
+	{
+		$link="http://en.wikipedia.org/wiki/WebPositive";
+		$title=detect_browser_version("WebPositive");
+		$code="webpositive";
 	}
 	elseif(preg_match('/AppleWebkit/i', $useragent)
 		&& preg_match('/Android/i', $useragent)
@@ -1553,6 +1631,13 @@ function detect_webbrowser()
 		$link="http://www.w3.org/People/Berners-Lee/WorldWideWeb.html";
 		$title=detect_browser_version("WorldWideWeb");
 		$code="worldwideweb";
+	}
+	elseif(preg_match('/wOSBrowser/i', $useragent)
+		|| preg_match('/webOSBrowser/i', $useragent))
+	{
+		$link="http://www.hp.com/";
+		$title="w".detect_browser_version("OSBrowser");
+		$code="webos";
 	}
 	elseif(preg_match('/wp-android/i', $useragent))
 	{
@@ -1640,6 +1725,14 @@ function detect_webbrowser()
 		$title=detect_browser_version("ABrowse");
 		$code="abrowse";
 	}
+	elseif(preg_match('/Edge/i', $useragent)
+		&& preg_match('/Chrome/i', $useragent)
+		&& preg_match('/Safari/i', $useragent))
+	{
+		$link="http://en.wikipedia.org/wiki/Microsoft_Edge";
+		$title="Microsoft ".detect_browser_version("Edge");
+		$code="msedge12";
+	}
 	elseif(preg_match('/Chrome/i', $useragent))
 	{
 		$link="http://google.com/chrome/";
@@ -1656,7 +1749,7 @@ function detect_webbrowser()
 		{
 			$title=detect_browser_version("Safari");
 		}
-		
+
 		if(preg_match('/Mobile Safari/i', $useragent))
 		{
 			$title="Mobile ".$title;
@@ -1668,7 +1761,7 @@ function detect_webbrowser()
 	{
 		$link="http://www.nokia.com/browser";
 		$title="Nokia Web Browser";
-		$code="maemo"; 
+		$code="maemo";
 	}
 	elseif(preg_match('/Firefox/i', $useragent))
 	{
@@ -1680,7 +1773,7 @@ function detect_webbrowser()
 	{
 		$link="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx";
 		$title="Internet Explorer".detect_browser_version("MSIE");
-		
+
 		if (preg_match('/MSIE[\ |\/]?([.0-9a-zA-Z]+)/i', $useragent, $regmatch))
 		{
 			// We have IE10 or older
@@ -1689,7 +1782,7 @@ function detect_webbrowser()
 		{
 			// We have IE11 or newer
 		}
-		
+
 
 		if($regmatch[1]>=10)
 		{
